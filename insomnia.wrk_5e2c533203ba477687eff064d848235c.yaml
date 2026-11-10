@@ -1,0 +1,249 @@
+type: spec.insomnia.rest/5.0
+schema_version: "5.1"
+name: feira-viva-tests
+meta:
+  id: wrk_5e2c533203ba477687eff064d848235c
+  created: 1788388383145
+  modified: 1793362301170
+  description: ""
+collection:
+  - url: http://localhost:8083/auth/login
+    name: T1 - POST /auth/login (credências corretas)
+    meta:
+      id: req_a799ebd771894339ac4ee705ad36ecae
+      created: 1793362352029
+      modified: 1793364160036
+      isPrivate: false
+      description: ""
+      sortKey: -1793362352029
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "email": "maria@email.com",
+          "senha": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/auth/login
+    name: T2 - POST /auth/login (credências incorretas)
+    meta:
+      id: req_9471b4ed0c9b4b049ebae4872ab9d535
+      created: 1793363803424
+      modified: 1793363815060
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351979
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "email": "maria@email.com",
+          "senha": "1234567"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/carrinho
+    name: T3 - GET /carrinho (sem token)
+    meta:
+      id: req_009d3e9b9b5247b99d967586e1ba7625
+      created: 1793363865554
+      modified: 1793363880000
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351929
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/carrinho
+    name: "T4 - GET /carrinho "
+    meta:
+      id: req_f8c17f0f39c14cddaf1784dce3947015
+      created: 1793364086305
+      modified: 1793364170084
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351879
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/carrinho/itens
+    name: T5 - POST /carrinho/itens {"produtoId":1,"quantidade":2}
+    meta:
+      id: req_afbe9ed16fd84366b354248f1bb93667
+      created: 1793364202792
+      modified: 1793364258751
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351829
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"produtoId": 1,
+        	"quantidade": 2
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/carrinho/cupom?codigo=FEIRA10
+    name: T6 - POST /carrinho/cupom?codigo=FEIRA10
+    meta:
+      id: req_a5fa63114bc346629c1202d9ddfe0043
+      created: 1793364296401
+      modified: 1793364330262
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351779
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/carrinho/frete?tipo=FIXO
+    name: T7 - POST /carrinho/frete?tipo=FIXO
+    meta:
+      id: req_8ad7fa00cd34441d8c8374ab1db02601
+      created: 1793364360343
+      modified: 1793364378693
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351729
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/pedidos
+    name: T8 - POST /pedidos {"enderecoId":1}
+    meta:
+      id: req_cc29c77711bd4cceb0d4080343aeeb2c
+      created: 1793364417127
+      modified: 1793364688123
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351679
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"enderecoId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_93e71f83c36648c499e5188212a5c411
+    created: 1793362250647
+    modified: 1793362250647
+environments:
+  name: Base Environment
+  meta:
+    id: env_b5d44bce3be843d4aba4a95abaead152
+    created: 1788388383146
+    modified: 1793362250567
+    isPrivate: false
+spec:
+  meta:
+    id: spc_cf8062d226734fe1a5989574349bf675
+    created: 1794318504310
+    modified: 1794318543406
