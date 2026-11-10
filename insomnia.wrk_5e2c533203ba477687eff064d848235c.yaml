@@ -177,7 +177,7 @@ collection:
     meta:
       id: req_8ad7fa00cd34441d8c8374ab1db02601
       created: 1793364360343
-      modified: 1793364378693
+      modified: 1794329018364
       isPrivate: false
       description: ""
       sortKey: -1793362351729
@@ -221,6 +221,132 @@ collection:
     authentication:
       type: bearer
       token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/pedidos
+    name: T9 - GET/pedidos
+    meta:
+      id: req_2664f492a7d341d6b08dde4925dfb991
+      created: 1794328775718
+      modified: 1794328780770
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351629
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/pedidos
+    name: T10 - Token adulterado
+    meta:
+      id: req_27e872a1f7b7437db01ce30fc41fcbd4
+      created: 1794328846088
+      modified: 1794328853697
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351579
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: feyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBlbWFpbC5jb20iLCJjbGllbnRlSWQiOjEsInBhcGVsIjoiQ0xJRU5URSIsImlhdCI6MTc5MzM2MzEwNSwiZXhwIjoxNzkzNDQ5NTA1fQ.PFXuUxwgpDqveYoJdl2KehC5LUPS6cTzb8McdFks94I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/produtos
+    name: T11.1 - GET/produtos
+    meta:
+      id: req_c93a2010c00c47d39e316271f8a0fa39
+      created: 1794328991858
+      modified: 1794329081412
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351529
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/categorias/arvore
+    name: T11.2 - GET/categorias/arvore
+    meta:
+      id: req_0f75a55ed3f84af8b7625b2db68508e1
+      created: 1794329030477
+      modified: 1794329084342
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351479
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8083/clientes
+    name: T12 - POST/clientes (nova cadastro, sem token)
+    meta:
+      id: req_98f91b9d443f4c7ab3b42b6233ea3d8c
+      created: 1794329124620
+      modified: 1794329145082
+      isPrivate: false
+      description: ""
+      sortKey: -1793362351429
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
     settings:
       renderRequestBody: true
       encodeUrl: true
